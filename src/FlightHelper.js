@@ -20,4 +20,15 @@ const getFlights = ({ flights, flightLocations }) => {
   );
 };
 
-export { checkFlight, getFlights };
+const convertFareObjectToArray = ({ category }) => {
+  return Object.keys(category)
+    .map((key) => {
+      return {
+        category: key,
+        subcategories: category?.[key]?.subcategories,
+      };
+    })
+    .reverse();
+};
+
+export { checkFlight, getFlights, convertFareObjectToArray };

@@ -1,0 +1,97 @@
+.timeInfo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.05);
+  cursor: default;
+  padding: 20px 15px;
+
+  &:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+  }
+
+  div {
+    margin-left: 10px;
+  }
+
+  .departureTimeInfo,
+  .arriveInfo,
+  .duration {
+    display: flex;
+    flex-direction: column;
+    color: #232b38;
+
+    span:first-child {
+      font-weight: bold;
+    }
+  }
+
+  label {
+    font-weight: bold;
+    font-size: 10px;
+  }
+
+  .line {
+    width: 100px;
+    height: 0;
+    border: 1px solid black;
+    display: inline-block;
+  }
+}
+
+.categories {
+  display: flex;
+  margin-left: 10px;
+
+  .category {
+    margin-left: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+
+    &:hover {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+    }
+
+    .categoryContent {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+    }
+
+    .titleECONOMY,
+    .titleBUSINESS {
+      text-align: start;
+      padding: 3px 0 3px 5px;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .titleECONOMY {
+      background-color: #dfe4ed;
+    }
+
+    .titleBUSINESS {
+      background-color: #f7eae4;
+    }
+
+    .price {
+      padding: 15px;
+
+      .currency {
+        font-size: 12px;
+        font-weight: bold;
+      }
+
+      .count {
+        font-weight: bold;
+        margin-left: 5px;
+      }
+    }
+
+    .perPassenger {
+      display: flex;
+      font-size: 12px;
+    }
+  }
+}
