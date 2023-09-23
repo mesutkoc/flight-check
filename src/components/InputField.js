@@ -4,7 +4,6 @@ import { ReactComponent as Arrival } from "assets/plane-arrival-solid.svg";
 import "./Components.scss";
 
 function Input({ prop }) {
-  console.log(prop);
   return (
     <div className="inputField">
       {prop === "Nereden" ? (

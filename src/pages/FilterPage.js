@@ -4,8 +4,11 @@ import InputField from "components/InputField";
 import SearchButton from "components/SearchButton";
 import LabelField from "components/LabelField";
 import CalenderField from "components/CalenderField";
+import { useFlights } from "context/FlightContext";
 
 const FilterPage = () => {
+  const { flights } = useFlights();
+  console.log(flights);
   return (
     <section className="filterPage">
       <div className="userField">
