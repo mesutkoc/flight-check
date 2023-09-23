@@ -17,7 +17,7 @@ function App() {
             path={PATH?.destination}
             element={<FilterPage></FilterPage>}
           ></Route>
-          <Route path={PATH.tickets} element={<TicketsPage />}></Route>
+          <Route path={`${PATH.tickets}/:i`} element={<TicketsPage />}></Route>
         </Routes>
       </div>
     </div>

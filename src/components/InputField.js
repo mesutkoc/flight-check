@@ -7,7 +7,7 @@ import "./Components.scss";
 function Input({ type, handleChange }) {
   return (
     <div className="inputField">
-      {type === ORIGIN ? (
+      {type.en === ORIGIN.en ? (
         <Departure className="icon"></Departure>
       ) : (
         <Arrival className="icon"></Arrival>
@@ -15,10 +15,10 @@ function Input({ type, handleChange }) {
       <input
         className="input"
         type="text"
-        id={type}
-        name={type}
-        placeholder={type}
-        onChange={(e) => handleChange(e.target.value, type)}
+        id={type.en}
+        name={type.en}
+        placeholder={type.tr}
+        onChange={(e) => handleChange(e.target.value, type.en)}
       ></input>
     </div>
   );

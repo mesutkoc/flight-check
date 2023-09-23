@@ -1,11 +1,23 @@
 const checkFlight = ({ flights, destination }) => {
-  return flights?.filter(
+  const flightsList = flights?.filter(
     (flight) =>
       flight?.destinationAirport?.city?.name.toLowerCase() ===
-        destination?.Nereye?.toLowerCase() &&
+        destination?.destination?.toLowerCase() &&
       flight?.originAirport?.city?.name.toLowerCase() ===
-        destination?.Nereden?.toLowerCase()
+        destination?.origin?.toLowerCase()
+  );
+
+  return flightsList?.length > 0;
+};
+
+const getFlights = ({ flights, flightLocations }) => {
+  return flights?.filter(
+    (flight) =>
+      flight?.originAirport?.city?.name?.toLowerCase() ===
+        flightLocations?.[0] &&
+      flight?.destinationAirport?.city?.name?.toLowerCase() ===
+        flightLocations?.[1]
   );
 };
 
-export { checkFlight };
+export { checkFlight, getFlights };

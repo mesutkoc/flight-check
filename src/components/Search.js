@@ -10,10 +10,12 @@ const Search = ({ destination, openModal }) => {
   const navigate = useNavigate();
 
   const viewTickets = () => {
-    const flightList = checkFlight({ flights, destination });
+    const hasFlights = checkFlight({ flights, destination });
 
-    flightList?.length > 0
-      ? navigate(`${PATH.currentPath}${PATH.tickets}`)
+    hasFlights
+      ? navigate(
+          `/${PATH.tickets}/${destination?.origin}-${destination?.destination}`
+        )
       : openModal();
   };
 

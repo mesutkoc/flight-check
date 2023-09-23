@@ -1,5 +1,5 @@
-const ORIGIN = "Nereden";
-const DESTINATION = "Nereye";
+const ORIGIN = { en: "origin", tr: "Nereden" };
+const DESTINATION = { en: "destination", tr: "Nereye" };
 const SEARCH_FLIGHT = "Uçuş Ara";
 const MODAL = {
   message: "Lütfen uçuşunuz için nokta seçin.",
