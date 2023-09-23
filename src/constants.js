@@ -1,4 +1,7 @@
 const ORIGIN = "Nereden";
 const DESTINATION = "Nereye";
+const SEARCH_FLIGHT = "Uçuş Ara";
 
-export { DESTINATION, ORIGIN };
+const PATH = { currentPath: "/", destination: "destination", tickets: "tickets" };
+
+export { DESTINATION, ORIGIN, SEARCH_FLIGHT, PATH };

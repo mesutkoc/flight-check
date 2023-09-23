@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { SEARCH_FLIGHT, PATH } from "constants";
 
 import "./Components.scss";
 
@@ -7,12 +8,12 @@ const SearchButton = () => {
   const navigate = useNavigate();
 
   const viewTickets = () => {
-    navigate(`/tickets`);
+    navigate(`/${PATH.tickets}`);
   };
 
   return (
     <button className="searchButton" onClick={() => viewTickets()}>
-      Uçuş Ara
+      {SEARCH_FLIGHT}
     </button>
   );
 };

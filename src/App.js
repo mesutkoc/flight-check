@@ -1,19 +1,23 @@
 import { Routes, Route, Navigate } from "react-router-dom";
 import FilterPage from "pages/FilterPage";
-import "./App.scss";
 import TicketsPage from "pages/TicketsPage";
+import { PATH } from "constants";
+import "./App.scss";
 
 function App() {
   return (
     <div className="App">
       <div>
         <Routes>
-          <Route path="/" element={<Navigate to="/destination" />} />
           <Route
-            path="/destination"
+            path={PATH.currentPath}
+            element={<Navigate to={PATH.destination} />}
+          />
+          <Route
+            path={PATH?.destination}
             element={<FilterPage></FilterPage>}
           ></Route>
-          <Route path={`/tickets`} element={<TicketsPage />}></Route>
+          <Route path={PATH.tickets} element={<TicketsPage />}></Route>
         </Routes>
       </div>
     </div>
