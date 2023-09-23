@@ -1,14 +1,16 @@
-import React from "react";
-import "./FilterPage.scss";
+import React, { useState } from "react";
+import { useDestination } from "context/DestinationContext";
 import InputField from "components/InputField";
-import SearchButton from "components/SearchButton";
+import Search from "components/Search";
 import LabelField from "components/LabelField";
 import CalenderField from "components/CalenderField";
-import { useDestination } from "context/DestinationContext";
+import ErrorModal from "components/ErrorModal";
 import { ORIGIN, DESTINATION } from "constants";
+import "./FilterPage.scss";
 
 const FilterPage = () => {
   const { destination, setDestination } = useDestination();
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleChange = (value, type) => {
     setDestination({
@@ -17,8 +19,16 @@ const FilterPage = () => {
     });
   };
 
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
   return (
-    <section className="filterPage">
+    <div className="filterPage">
       <div className="userField">
         <LabelField></LabelField>
         <div className="fieldItems">
@@ -28,10 +38,11 @@ const FilterPage = () => {
             handleChange={handleChange}
           ></InputField>
           <CalenderField></CalenderField>
-          <SearchButton></SearchButton>
+          <Search destination={destination} openModal={openModal}></Search>
         </div>
       </div>
-    </section>
+      <ErrorModal isOpen={isModalOpen} onClose={closeModal}></ErrorModal>
+    </div>
   );
 };
 

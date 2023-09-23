@@ -16,14 +16,14 @@
       font-size: 24px;
       text-align: left;
       margin-top: 150px;
-      padding-right: 100px;
+      padding-right: 200px;
     }
 
     .fieldItems {
       background-color: white !important;
       border-radius: 1px;
       box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.12);
-      padding: 40px 50px;
+      padding: 30px 50px;
       margin-top: 140px;
       display: flex;
     }
@@ -34,6 +34,10 @@
   .fieldItems {
     flex-direction: column;
     padding: 10px !important;
+  }
+
+  .fieldLabels {
+    padding: 0px !important;
   }
 
   .inputField {
