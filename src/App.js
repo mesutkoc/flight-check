@@ -1,10 +1,10 @@
-import Header from "components/Header";
-import "./App.css";
+import "./App.scss";
+import FilterPage from "pages/FilterPage";
 
 function App() {
   return (
     <div className="App">
-      Hello <Header></Header>
+      <FilterPage></FilterPage>
     </div>
   );
 }

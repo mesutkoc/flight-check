@@ -1,0 +1,39 @@
+.inputField {
+  display: flex;
+  align-items: center;
+
+  .icon {
+    padding-right: 10px;
+  }
+  .input {
+    background-color: #f4f6f8;
+    height: 35px;
+    border: none;
+    margin-right: 10px;
+  }
+}
+
+.searchButton {
+  background-color: #e81932 !important;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-left: 10px;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+.calenderField {
+  display: flex;
+  align-items: center;
+  border: 1px solid #063048;
+  border-radius: 1px;
+  padding: 5px 10px;
+
+  span {
+    padding-left: 5px;
+  }
+}

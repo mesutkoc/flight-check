@@ -1,0 +1,32 @@
+.filterPage {
+  background-image: url("/assets/background-imagee.webp");
+  height: 420px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+
+  .userField {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: inherit;
+
+    .fieldLabels {
+      color: white;
+      font-size: 24px;
+      text-align: left;
+      margin-top: 150px;
+      padding-right: 100px;
+    }
+
+    .fieldItems {
+      background-color: white !important;
+      border-radius: 1px;
+      box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.12);
+      padding: 40px 50px;
+      margin-top: 140px;
+      display: flex;
+      align-items: center;
+    }
+  }
+}
