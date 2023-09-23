@@ -11,7 +11,7 @@ const SearchButton = () => {
   };
 
   return (
-    <button className="searchButton" onClick={() => viewTickets("item")}>
+    <button className="searchButton" onClick={() => viewTickets()}>
       Uçuş Ara
     </button>
   );

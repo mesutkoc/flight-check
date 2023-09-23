@@ -26,7 +26,29 @@
       padding: 40px 50px;
       margin-top: 140px;
       display: flex;
-      align-items: center;
     }
+  }
+}
+
+@media only screen and (max-width: 670px) {
+  .fieldItems {
+    flex-direction: column;
+    padding: 10px !important;
+  }
+
+  .inputField {
+    padding: 10px 10px 0 10px !important;
+
+    .input {
+      margin-right: 0px !important;
+    }
+  }
+
+  .searchButton {
+    margin-right: 10px;
+  }
+
+  .calenderField {
+    margin: 10px !important;
   }
 }
