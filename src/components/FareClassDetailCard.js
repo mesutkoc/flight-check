@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useMemo } from "react";
+import { useFilter } from "context/FilterContext";
 import PriceField from "./PriceField";
 
 const FareClassDetailCard = ({ item, cat }) => {
+  const { promotion } = useFilter();
+  const disabledButton = useMemo(() => {
+    return promotion && item?.brandCode !== "ecoFly";
+  }, [promotion, item?.brandCode]);
+
   return (
     <div className="detailCard">
       <div className={`detailHeader${cat?.category}`}>
@@ -21,7 +27,12 @@ const FareClassDetailCard = ({ item, cat }) => {
         </div>
       </div>
       <div className="addButton">
-        <button>Uçuşu Seç</button>
+        <button
+          disabled={disabledButton && `disabled`}
+          onClick={() => console.log("asd")}
+        >
+          Uçuşu Seç
+        </button>
       </div>
     </div>
   );

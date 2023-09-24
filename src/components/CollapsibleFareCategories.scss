@@ -55,5 +55,11 @@
       bottom: 0px;
       padding: 5px 10px;
     }
+
+    button[disabled] {
+      cursor: not-allowed;
+      color: white;
+      opacity: 0.2;
+    }
   }
 }

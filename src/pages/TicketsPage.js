@@ -8,6 +8,7 @@ import CollapsibleFareCategories from "components/CollapsibleFareCategories";
 import TicketSort from "components/TicketSort";
 import { useFilter } from "context/FilterContext";
 import "./TicketsPage.scss";
+import PromotionField from "components/PromotionField";
 
 function TicketsPage() {
   const { flights } = useFlights();
@@ -33,6 +34,11 @@ function TicketsPage() {
 
   return (
     <div className="ticketsPage">
+      <div className="flightInfo">
+        <div className="flight">Uçuş</div>
+        {i}
+      </div>
+      <PromotionField></PromotionField>
       <TicketSort></TicketSort>
       <div className="tickets">
         {flightsList?.map((flight, index) => (

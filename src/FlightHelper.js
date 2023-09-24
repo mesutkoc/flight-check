@@ -13,7 +13,6 @@ const checkFlight = ({ flights, destination }) => {
 };
 
 const getFlights = ({ flights, flightLocations, filterType }) => {
-  console.log(flights);
   const flightList = flights?.filter(
     (flight) =>
       flight?.originAirport?.city?.name?.toLowerCase() ===

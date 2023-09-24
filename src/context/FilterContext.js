@@ -5,10 +5,13 @@ const FilterContext = createContext();
 
 export const FilterProvider = ({ children }) => {
   const [filterType, setFilterType] = useState(FILTER_TYPE.default);
+  const [promotion, setPromotion] = useState(false);
 
   const values = {
     filterType,
     setFilterType,
+    promotion,
+    setPromotion,
   };
 
   return (
