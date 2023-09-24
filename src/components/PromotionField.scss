@@ -5,9 +5,15 @@
 }
 .promotionInfo {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: self-start;
   margin: 10px 200px;
   padding: 5px 0;
+
+  p {
+    margin-top: 5px !important;
+    font-size: 14px;
+  }
 }
 .switch {
   margin-left: 20px;

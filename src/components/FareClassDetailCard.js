@@ -4,9 +4,13 @@ import PriceField from "./PriceField";
 
 const FareClassDetailCard = ({ item, cat }) => {
   const { promotion } = useFilter();
+
   const disabledButton = useMemo(() => {
-    return promotion && item?.brandCode !== "ecoFly";
-  }, [promotion, item?.brandCode]);
+    return (
+      (promotion && item?.brandCode !== "ecoFly") ||
+      (promotion && cat?.category === "BUSINESS")
+    );
+  }, [promotion, item?.brandCode, cat]);
 
   return (
     <div className="detailCard">
@@ -15,7 +19,13 @@ const FareClassDetailCard = ({ item, cat }) => {
         <div className="price">
           <PriceField
             currency={item?.price?.currency}
-            amount={item?.price?.amount}
+            amount={
+              promotion &&
+              item?.brandCode === "ecoFly" &&
+              cat?.category === "ECONOMY"
+                ? item?.price?.amount / 2
+                : item?.price?.amount
+            }
           ></PriceField>
         </div>
       </div>

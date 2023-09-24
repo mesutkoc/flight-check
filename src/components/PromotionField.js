@@ -1,6 +1,6 @@
 import React from "react";
-import "./PromotionField.scss";
 import { useFilter } from "context/FilterContext";
+import "./PromotionField.scss";
 
 const PromotionField = () => {
   const { promotion, setPromotion } = useFilter();
@@ -18,8 +18,14 @@ const PromotionField = () => {
       </div>
       {promotion && (
         <div className="promotionInfo">
-          Promosyon kodu aktifken Eco Fly paketi haricinde seçim
-          yapılamamaktadır.
+          <p>
+            Promosyon Kodu seçeneği ile tüm Economy kabini Eco Fly paketlerini
+            %50 indirimle satın alabilirsiniz!
+          </p>
+          <p>
+            Promosyon Kodu seçeneği aktifken Eco Fly paketi haricinde seçim
+            yapılamamaktadır.
+          </p>
         </div>
       )}
     </div>

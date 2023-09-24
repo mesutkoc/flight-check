@@ -9,7 +9,10 @@ const TicketSort = () => {
     <div className="headerFilter">
       <span>Sıralama Kriterleri</span>
       <span
-        className={`${filterType === FILTER_TYPE.price && FILTER_TYPE.price}`}
+        className={`${
+          filterType === FILTER_TYPE.price ||
+          (filterType === FILTER_TYPE.default && FILTER_TYPE.price)
+        }`}
         onClick={() => setFilterType(FILTER_TYPE.price)}
       >
         Ekonomi Ücreti

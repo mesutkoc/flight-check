@@ -25,7 +25,7 @@ const getFlights = ({ flights, flightLocations, filterType }) => {
 };
 
 const filteredFlightList = (flightList, filterType) => {
-  if (filterType === FILTER_TYPE.price) {
+  if (filterType === FILTER_TYPE.price || filterType === FILTER_TYPE.default) {
     return flightList.sort((a, b) => {
       return (
         a.fareCategories.ECONOMY.subcategories[0].price.amount -
@@ -38,7 +38,6 @@ const filteredFlightList = (flightList, filterType) => {
       return a.departureDateTimeDisplay - b.departureDateTimeDisplay;
     });
   }
-  return flightList;
 };
 
 const convertFareObjectToArray = ({ category }) => {

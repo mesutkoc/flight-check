@@ -1,9 +1,12 @@
 import React, { useMemo } from "react";
+import { useFilter } from "context/FilterContext";
 import { convertFareObjectToArray } from "FlightHelper";
 import PriceField from "./PriceField";
 import "./TicketComponents.scss";
 
 const TicketFareCategory = ({ category, onClick, index: count }) => {
+  const { promotion } = useFilter();
+
   const fareList = useMemo(() => {
     return convertFareObjectToArray({ category });
   }, [category]);
@@ -23,7 +26,11 @@ const TicketFareCategory = ({ category, onClick, index: count }) => {
                 <div className="perPassenger">Yolcu Başına</div>
                 <PriceField
                   currency={cat?.subcategories?.[0]?.price?.currency}
-                  amount={cat?.subcategories?.[0]?.price?.amount}
+                  amount={
+                    promotion && cat?.category === "ECONOMY"
+                      ? cat?.subcategories?.[0]?.price?.amount / 2
+                      : cat?.subcategories?.[0]?.price?.amount
+                  }
                 ></PriceField>
               </div>
               <div>V</div>
