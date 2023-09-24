@@ -4,7 +4,7 @@ import "./PromotionField.scss";
 
 const PromotionField = () => {
   const { promotion, setPromotion } = useFilter();
-  console.log(promotion);
+
   return (
     <div>
       <div className="promotion">

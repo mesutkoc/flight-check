@@ -15,7 +15,7 @@ const FilterPage = () => {
   const handleChange = (value, type) => {
     setDestination({
       ...destination,
-      [type]: value,
+      [type]: value === "İstanbul" ? "istanbul" : value,
     });
   };
 
