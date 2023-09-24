@@ -4,6 +4,7 @@ import "./PromotionField.scss";
 
 const PromotionField = () => {
   const { promotion, setPromotion } = useFilter();
+  console.log(promotion);
   return (
     <div>
       <div className="promotion">
@@ -11,6 +12,7 @@ const PromotionField = () => {
         <label className="switch">
           <input
             type="checkbox"
+            checked={promotion && true}
             onChange={() => setPromotion((prev) => !prev)}
           />
           <span className="slider round"></span>

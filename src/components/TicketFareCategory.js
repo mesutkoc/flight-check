@@ -6,7 +6,6 @@ import "./TicketComponents.scss";
 
 const TicketFareCategory = ({ category, onClick, index: count }) => {
   const { promotion } = useFilter();
-
   const fareList = useMemo(() => {
     return convertFareObjectToArray({ category });
   }, [category]);
@@ -33,7 +32,6 @@ const TicketFareCategory = ({ category, onClick, index: count }) => {
                   }
                 ></PriceField>
               </div>
-              <div>V</div>
             </div>
           </div>
         </div>
