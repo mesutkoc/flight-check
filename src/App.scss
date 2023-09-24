@@ -13,4 +13,16 @@
     width: 25px;
     height: 25px;
   }
+
+  button {
+    background-color: #e81932;
+    border: none;
+    border-radius: 1px;
+    color: white;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
 }

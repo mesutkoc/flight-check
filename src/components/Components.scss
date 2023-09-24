@@ -16,17 +16,9 @@
 }
 
 .searchButton {
-  background-color: #e81932 !important;
-  border: none;
-  color: white;
   padding: 10px 20px;
   border-radius: 1px;
-  cursor: pointer;
   margin-left: 10px;
-
-  &:hover {
-    opacity: 0.8;
-  }
 }
 
 .calenderField {
@@ -62,15 +54,6 @@
   }
 
   button {
-    background-color: #e81932 !important;
-    border: none;
-    border-radius: 1px;
-    color: white;
     padding: 5px 10px;
-    cursor: pointer;
-
-    &:hover {
-      opacity: 0.8;
-    }
   }
 }

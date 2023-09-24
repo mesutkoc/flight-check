@@ -3,6 +3,8 @@
 }
 .detailCard {
   margin: 10px;
+  position: relative;
+  min-height: 150px;
 
   .detailHeaderECONOMY {
     background-color: #f4f5f8;
@@ -18,7 +20,6 @@
   .detailHeaderBUSINESS {
     display: flex;
     align-items: center;
-
     padding: 10px 15px;
 
     .price {
@@ -42,7 +43,17 @@
   }
 
   .addButton {
-    display: flex;
-    justify-content: center;
+    position: absolute;
+    bottom: 0px;
+    right: 50%;
+
+    button {
+      position: absolute;
+      margin-left: -50px;
+      left: 50%;
+      width: 100px;
+      bottom: 0px;
+      padding: 5px 10px;
+    }
   }
 }

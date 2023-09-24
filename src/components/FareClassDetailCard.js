@@ -1,7 +1,7 @@
 import React from "react";
 import PriceField from "./PriceField";
 
-const FareClassDetailCard = ({ item, index, cat }) => {
+const FareClassDetailCard = ({ item, cat }) => {
   return (
     <div className="detailCard">
       <div className={`detailHeader${cat?.category}`}>
@@ -21,7 +21,7 @@ const FareClassDetailCard = ({ item, index, cat }) => {
         </div>
       </div>
       <div className="addButton">
-        <button>ads</button>
+        <button>Uçuşu Seç</button>
       </div>
     </div>
   );
