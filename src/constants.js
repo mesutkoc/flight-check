@@ -11,4 +11,10 @@ const PATH = {
   tickets: "tickets",
 };
 
-export { DESTINATION, ORIGIN, SEARCH_FLIGHT, PATH, MODAL };
+const FILTER_TYPE = {
+  departure: "DEPARTURE",
+  price: "PRICE",
+  default: "DEFAULT",
+};
+
+export { DESTINATION, ORIGIN, SEARCH_FLIGHT, PATH, MODAL, FILTER_TYPE };
