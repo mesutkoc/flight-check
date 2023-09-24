@@ -1,4 +1,4 @@
-import { FILTER_TYPE } from "constants";
+import { FILTER_TYPE } from "./constants";
 
 const checkFlight = ({ flights, destination }) => {
   const flightsList = flights?.filter(
@@ -16,9 +16,9 @@ const getFlights = ({ flights, flightLocations, filterType }) => {
   const flightList = flights?.filter(
     (flight) =>
       flight?.originAirport?.city?.name?.toLowerCase() ===
-        flightLocations?.[0] &&
+        flightLocations?.[0].toLowerCase() &&
       flight?.destinationAirport?.city?.name?.toLowerCase() ===
-        flightLocations?.[1]
+        flightLocations?.[1].toLowerCase()
   );
 
   return filteredFlightList(flightList, filterType);
