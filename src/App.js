@@ -3,6 +3,7 @@ import FilterPage from "pages/FilterPage";
 import TicketsPage from "pages/TicketsPage";
 import { PATH } from "constants";
 import "./App.scss";
+import ResultPage from "pages/ResultPage";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
             element={<FilterPage></FilterPage>}
           ></Route>
           <Route path={`${PATH.tickets}/:i`} element={<TicketsPage />}></Route>
+          <Route path={`${PATH.result}`} element={<ResultPage />}></Route>
         </Routes>
       </div>
     </div>

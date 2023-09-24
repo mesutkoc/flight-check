@@ -9,6 +9,7 @@ const PATH = {
   currentPath: "/",
   destination: "destination",
   tickets: "tickets",
+  result: "result",
 };
 
 const FILTER_TYPE = {

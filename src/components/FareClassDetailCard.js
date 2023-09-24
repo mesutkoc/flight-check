@@ -1,9 +1,14 @@
 import React, { useMemo } from "react";
+import { useNavigate } from "react-router-dom";
 import { useFilter } from "context/FilterContext";
 import PriceField from "./PriceField";
+import { useFlights } from "context/FlightContext";
+import PassengerRights from "./PassengerRights";
 
 const FareClassDetailCard = ({ item, cat }) => {
   const { promotion } = useFilter();
+  const { setSelectedFlight } = useFlights();
+  const navigate = useNavigate();
 
   const disabledButton = useMemo(() => {
     return (
@@ -11,6 +16,11 @@ const FareClassDetailCard = ({ item, cat }) => {
       (promotion && cat?.category === "BUSINESS")
     );
   }, [promotion, item?.brandCode, cat]);
+
+  const onFlightSelect = () => {
+    setSelectedFlight(item);
+    navigate(`/result`);
+  };
 
   return (
     <div className="detailCard">
@@ -30,16 +40,12 @@ const FareClassDetailCard = ({ item, cat }) => {
         </div>
       </div>
       <div className="passegerRights">
-        <div className="list">
-          {item.rights?.map((right, index) => (
-            <p key={index}>{right}</p>
-          ))}
-        </div>
+        <PassengerRights item={item}></PassengerRights>
       </div>
       <div className="addButton">
         <button
           disabled={disabledButton && `disabled`}
-          onClick={() => console.log("asd")}
+          onClick={() => onFlightSelect(item)}
         >
           Uçuşu Seç
         </button>

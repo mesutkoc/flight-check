@@ -5,9 +5,12 @@ const FlightContext = createContext();
 
 export const FlightProvider = ({ children }) => {
   const [flights, setFlights] = useState(data?.flights);
+  const [selectedFlight, setSelectedFlight] = useState(data?.flights);
 
   const values = {
     flights,
+    selectedFlight,
+    setSelectedFlight,
     setFlights,
   };
 
