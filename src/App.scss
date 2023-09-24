@@ -25,4 +25,16 @@
       opacity: 0.8;
     }
   }
+
+  header {
+    background-color: #063048;
+    display: flex;
+    color: white;
+    padding: 10px 20px;
+
+    .logo {
+      cursor: pointer;
+      font-weight: bold;
+    }
+  }
 }

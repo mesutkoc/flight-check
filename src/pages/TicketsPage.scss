@@ -31,21 +31,23 @@
     background-color: #e81932;
   }
 }
+.ticketsPage {
+  .flightInfo {
+    margin: 10px 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 
-.flightInfo {
-  margin: 10px 200px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-
-  .flight {
-    background-color: #e81932;
-    border-radius: 1px;
-    padding: 5px 10px;
-    margin-bottom: 10px;
-    color: white;
+    .flight {
+      background-color: #e81932;
+      border-radius: 1px;
+      padding: 5px 10px;
+      margin-bottom: 10px;
+      color: white;
+    }
   }
 }
+
 .tickets {
   background-color: #f9f9f9;
   margin: 0 200px;

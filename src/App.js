@@ -8,6 +8,9 @@ import ResultPage from "pages/ResultPage";
 function App() {
   return (
     <div className="App">
+      <header>
+        <div className="logo">FLIGHT CHECK</div>
+      </header>
       <div>
         <Routes>
           <Route
